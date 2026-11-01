@@ -1,0 +1,6 @@
+NEXTJS_ENV=development
+SUPABASE_URL=https://yysctpfwpoxgspusdyta.supabase.co
+SUPABASE_PUBLISHABLE_KEY=
+SUPABASE_SECRET_KEY=
+RESTAURANT_TIMEZONE=Asia/Jakarta
+APP_MODE=development

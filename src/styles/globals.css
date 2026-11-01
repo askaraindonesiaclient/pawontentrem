@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rice: #F7F1E5;
+  --paper: #FFFDF8;
+  --leaf: #274B3A;
+  --wood: #6B4A32;
+  --turmeric: #C59A48;
+  --ink: #262B25;
+  --muted: #62665C;
+  --line: #DCD6C8;
+  --danger: #9B3232;
+  --success-bg: #E8F0E7;
+}
+
+body {
+  background-color: var(--rice);
+  color: var(--ink);
+  font-family: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-editorial {
+  font-family: var(--font-lora), Georgia, serif;
+}
+
+/* Javanese Pattern Overlays */
+.javanese-surface {
+  position: relative;
+  isolation: isolate;
+}
+
+.javanese-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/assets/patterns/kawung-brown.png') repeat;
+  background-size: 256px 256px;
+  opacity: 0.06;
+}
+
+.javanese-footer {
+  position: relative;
+  isolation: isolate;
+}
+
+.javanese-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: url('/assets/patterns/kawung-cream.png') repeat;
+  background-size: 256px 256px;
+  opacity: 0.08;
+}
+
+.javanese-truntum-surface {
+  position: relative;
+  isolation: isolate;
+}
+
+.javanese-truntum-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url('/assets/patterns/truntum-gold.png') repeat;
+  background-size: 256px 256px;
+  opacity: 0.08;
+}
+
+.javanese-parang-divider {
+  height: 24px;
+  background: url('/assets/patterns/parang-brown.png') repeat-x center;
+  background-size: auto 24px;
+  opacity: 0.08;
+}
+
+/* Animations and Reduced Motion */
+.section-reveal {
+  animation: fadeIn 400ms ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .section-reveal {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Target touch size 44px min */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

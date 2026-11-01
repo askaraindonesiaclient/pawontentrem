@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "pawontentrem",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "images": {
+    "binding": "IMAGES"
+  },
+  "vars": {
+    "SUPABASE_URL": "https://yysctpfwpoxgspusdyta.supabase.co",
+    "RESTAURANT_TIMEZONE": "Asia/Jakarta",
+    "APP_MODE": "production"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
