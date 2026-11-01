@@ -45,3 +45,4 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ code: 'TEMPORARY_ERROR' }, { status: 500 });
   }
 }
+

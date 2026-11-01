@@ -209,3 +209,4 @@ export default function UbahMenuEntryPage() {
     </div>
   );
 }
+

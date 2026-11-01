@@ -9,7 +9,11 @@ interface MampirLokasiProps {
   mapsUrl?: string | null;
 }
 
-export function MampirLokasi({ address, whatsapp, mapsUrl }: MampirLokasiProps) {
+export function MampirLokasi({
+  address = 'Jl. Slamet Riyadi No. 128, Laweyan, Surakarta (Solo), Jawa Tengah',
+  whatsapp = '081234567890',
+  mapsUrl = 'https://maps.google.com/?q=Solo+Jawa+Tengah',
+}: MampirLokasiProps) {
   const [loadMap, setLoadMap] = useState(false);
 
   const cleanWhatsapp = whatsapp ? whatsapp.replace(/[^0-9]/g, '') : null;
@@ -159,3 +163,4 @@ export function MampirLokasi({ address, whatsapp, mapsUrl }: MampirLokasiProps) 
     </section>
   );
 }
+

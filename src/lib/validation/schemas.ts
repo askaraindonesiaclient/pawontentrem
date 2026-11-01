@@ -62,3 +62,4 @@ export const siteSettingsSchema = z.object({
   whatsapp: z.string().max(20).nullable().optional(),
   mapsUrl: z.string().url('URL Google Maps harus valid').nullable().optional().or(z.literal('')),
 });
+

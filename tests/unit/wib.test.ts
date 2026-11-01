@@ -50,3 +50,4 @@ describe('U01 - Nullable Price Formatting', () => {
     expect(formatRupiahNullable(5000, 'from', 'gelas')).toBe('Mulai dari Rp5.000 / gelas');
   });
 });
+

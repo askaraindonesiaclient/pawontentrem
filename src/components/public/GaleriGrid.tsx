@@ -198,3 +198,4 @@ export function GaleriGrid({ showFilter = true, limit }: GaleriGridProps) {
     </div>
   );
 }
+

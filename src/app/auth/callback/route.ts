@@ -22,3 +22,4 @@ export async function GET(request: NextRequest) {
   // If error or no code, redirect to login
   return NextResponse.redirect(new URL('/admin/login', request.url));
 }
+

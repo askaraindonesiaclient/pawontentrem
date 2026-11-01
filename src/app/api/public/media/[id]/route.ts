@@ -83,3 +83,4 @@ export async function GET(
     expiresAt: new Date(Date.now() + 600000).toISOString(),
   });
 }
+

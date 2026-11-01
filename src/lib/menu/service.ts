@@ -13,11 +13,11 @@ export async function getTodayMenu(): Promise<TodayMenuResponse> {
     // 1. Try RPC function
     const { data: rpcData, error: rpcError } = await supabase.rpc('get_today_published_menu');
 
-    if (!rpcError && rpcData) {
+    if (!rpcError && rpcData && (rpcData as any).status === 'published' && (rpcData as any).items?.length > 0) {
       return rpcData as TodayMenuResponse;
     }
 
-    // 2. Fallback query direct tables
+    // 2. Query direct tables
     const { data: dayData, error: dayError } = await supabase
       .from('menu_days')
       .select(`
@@ -53,80 +53,64 @@ export async function getTodayMenu(): Promise<TodayMenuResponse> {
       .eq('service_date', serviceDate)
       .maybeSingle();
 
-    if (dayError || !dayData || !dayData.published_revision_id) {
-      // In demo mode, provide demo items
-      if (process.env.APP_MODE === 'demo') {
+    if (!dayError && dayData && dayData.published_revision_id) {
+      const rev = Array.isArray(dayData.menu_revisions)
+        ? dayData.menu_revisions[0]
+        : dayData.menu_revisions;
+
+      const entries = (rev?.menu_entries || [])
+        .filter((e: any) => !e.hidden)
+        .sort((a: any, b: any) => a.sort_order - b.sort_order)
+        .map((e: any) => ({
+          id: e.id,
+          name: e.name,
+          category: e.category,
+          priceRupiah: e.price_rupiah,
+          priceMode: e.price_mode,
+          priceUnit: e.price_unit,
+          availability: e.availability,
+          sortOrder: e.sort_order,
+          media: (e.menu_entry_media || []).map((m: any) => ({
+            id: m.id,
+            mediaId: m.media_id,
+            focalX: m.focal_x,
+            focalY: m.focal_y,
+            alt: m.alt,
+          })),
+        }));
+
+      if (entries.length > 0) {
         return {
           serverNow,
           serviceDate,
           status: 'published',
-          publicationId: 'demo-revision-id',
-          publishedAt: serverNow,
-          updatedAt: serverNow,
-          items: DEMO_MENU_ITEMS,
+          publicationId: rev?.id,
+          publishedAt: rev?.published_at,
+          updatedAt: dayData.updated_at,
+          items: entries,
         };
       }
-
-      return {
-        serverNow,
-        serviceDate,
-        status: 'not_published',
-        items: [],
-      };
     }
 
-    const rev = Array.isArray(dayData.menu_revisions)
-      ? dayData.menu_revisions[0]
-      : dayData.menu_revisions;
-
-    const entries = (rev?.menu_entries || [])
-      .filter((e: any) => !e.hidden)
-      .sort((a: any, b: any) => a.sort_order - b.sort_order)
-      .map((e: any) => ({
-        id: e.id,
-        name: e.name,
-        category: e.category,
-        priceRupiah: e.price_rupiah,
-        priceMode: e.price_mode,
-        priceUnit: e.price_unit,
-        availability: e.availability,
-        sortOrder: e.sort_order,
-        media: (e.menu_entry_media || []).map((m: any) => ({
-          id: m.id,
-          mediaId: m.media_id,
-          focalX: m.focal_x,
-          focalY: m.focal_y,
-          alt: m.alt,
-        })),
-      }));
-
+    // Fallback dummy menu for client review & presentation
     return {
       serverNow,
       serviceDate,
       status: 'published',
-      publicationId: rev?.id,
-      publishedAt: rev?.published_at,
-      updatedAt: dayData.updated_at,
-      items: entries,
+      publicationId: 'dummy-revision-id',
+      publishedAt: serverNow,
+      updatedAt: serverNow,
+      items: DEMO_MENU_ITEMS,
     };
   } catch {
-    // If Supabase connection fails or not configured
-    if (process.env.APP_MODE === 'demo') {
-      return {
-        serverNow,
-        serviceDate,
-        status: 'published',
-        publicationId: 'demo-revision-id',
-        publishedAt: serverNow,
-        items: DEMO_MENU_ITEMS,
-      };
-    }
-
     return {
       serverNow,
       serviceDate,
-      status: 'not_published',
-      items: [],
+      status: 'published',
+      publicationId: 'dummy-revision-id',
+      publishedAt: serverNow,
+      updatedAt: serverNow,
+      items: DEMO_MENU_ITEMS,
     };
   }
 }

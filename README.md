@@ -92,3 +92,4 @@ Website resmi dan sistem manajemen menu harian untuk rumah makan prasmanan **Paw
 ## 🛡️ Hak Cipta & Lisensi
 
 Foto ilustrasi masakan pada mode prototipe berlisensi Creative Commons (CC BY-SA). Lihat rincian pembuat dan atribusi pada `/kredit-foto` atau file `assets/PHOTO_CREDITS.md`.
+

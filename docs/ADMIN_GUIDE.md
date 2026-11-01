@@ -50,3 +50,4 @@ Panduan ini ditujukan bagi pemilik usaha dan staf dapur Pawon Tentrem untuk meng
 
 - Anda **tidak perlu repot menghapus** menu lama saat menutup rumah makan di malam hari.
 - Tepat pukul 00.00 WIB tengah malam, sistem secara otomatis beralih ke hari layanan baru. Menu hari kemarin akan tersimpan secara otomatis di menu **Riwayat** dan tidak akan diklaim sebagai menu hari ini.
+

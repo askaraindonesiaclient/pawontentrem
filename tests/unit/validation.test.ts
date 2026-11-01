@@ -52,3 +52,4 @@ describe('Menu Entry Form Validation', () => {
     expect(res.success).toBe(false);
   });
 });
+

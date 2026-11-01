@@ -85,3 +85,4 @@ export function formatRupiahNullable(
   const suffix = unit ? ` / ${unit}` : '';
   return `${prefix}${formatted}${suffix}`;
 }
+

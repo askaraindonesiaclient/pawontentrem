@@ -349,3 +349,4 @@ export function DailyMenuSection({ initialData }: DailyMenuSectionProps) {
     </section>
   );
 }
+

@@ -57,3 +57,4 @@ export interface AdminProfile {
   role: 'owner' | 'editor';
   active: boolean;
 }
+

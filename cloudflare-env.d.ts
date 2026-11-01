@@ -9,3 +9,4 @@ interface CloudflareEnv {
   SUPABASE_SERVICE_ROLE_KEY?: string;
   SITE_URL?: string;
 }
+
