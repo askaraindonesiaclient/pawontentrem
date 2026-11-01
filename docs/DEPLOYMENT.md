@@ -7,9 +7,9 @@ Dokumen ini mencatat konfigurasi deployment pada Cloudflare Workers dan integras
 ## 1. Lingkungan Produksi Aktif
 
 - **Worker Name**: `pawontentrem`
-- **Cloudflare Account ID**: `953726b9d6c55b335756869db92de91a`
-- **Cloudflare Account Email**: `askaraindonesiacompany@gmail.com`
-- **Live URL**: `https://pawontentrem.askaraindonesiacompany.workers.dev`
+- **Cloudflare Account ID**: `eb6dcfa7673ee236e93de46ec2cdba1a`
+- **Cloudflare Account Email**: `askaraindonesia220@gmail.com`
+- **Live URL**: `https://pawontentrem.askaraindonesia220.workers.dev`
 - **Compatibility Date**: `2026-11-01`
 - **Compatibility Flags**: `["nodejs_compat"]`
 - **Framework Adapter**: `@opennextjs/cloudflare`

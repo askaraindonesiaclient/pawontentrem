@@ -2,7 +2,7 @@
 
 Website resmi dan sistem manajemen menu harian untuk rumah makan prasmanan **Pawon Tentrem**, dibangun menggunakan **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS**, **Supabase (PostgreSQL & Auth & Storage)**, dan di-deploy pada **Cloudflare Workers** menggunakan adapter `@opennextjs/cloudflare`.
 
-🌐 **URL Produksi Cloudflare:** [https://pawontentrem.askaraindonesiacompany.workers.dev](https://pawontentrem.askaraindonesiacompany.workers.dev)
+🌐 **URL Produksi Cloudflare:** [https://pawontentrem.askaraindonesia220.workers.dev](https://pawontentrem.askaraindonesia220.workers.dev)
 
 ---
 
