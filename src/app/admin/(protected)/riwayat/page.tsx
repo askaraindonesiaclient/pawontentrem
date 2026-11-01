@@ -17,7 +17,7 @@ const PAST_DAYS: HistoryRecord[] = [
     date: '2026-11-01',
     itemCount: 6,
     publishedAt: '09.15 WIB',
-    items: ['Nasi Liwet Solo', 'Ayam Goreng Lengkuas', 'Sayur Lodeh', 'Tempe Bacem'],
+    items: ['Ayam Saus Gurih Wijen', 'Bakwan Rempah Renyah', 'Sayur Lodeh', 'Tempe Bacem'],
   },
   {
     date: '2026-10-31',

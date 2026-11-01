@@ -5,9 +5,11 @@ import { Save, CheckCircle2 } from 'lucide-react';
 
 export default function PengaturanAdminPage() {
   const [brandName, setBrandName] = useState('Pawon Tentrem');
-  const [whatsapp, setWhatsapp] = useState('');
-  const [address, setAddress] = useState('');
-  const [mapsUrl, setMapsUrl] = useState('');
+  const [whatsapp, setWhatsapp] = useState('081234567890');
+  const [address, setAddress] = useState(
+    'Perumahan Puncak Dieng Eksklusif Blok NN No. 21 (Dekat Kampus 2 UB), Kunci, Kalisongo, Kec. Dau, Kabupaten Malang, Jawa Timur 65151'
+  );
+  const [mapsUrl, setMapsUrl] = useState('https://share.google/4QzXuDet1O7uiGwKI');
   const [saved, setSaved] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -72,7 +74,7 @@ export default function PengaturanAdminPage() {
             rows={3}
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-            placeholder="Contoh: Jl. Slamet Riyadi No. 123, Solo, Jawa Tengah"
+            placeholder="Contoh: Perumahan Puncak Dieng Blok NN No. 21, Malang, Jawa Timur"
             className="w-full px-4 py-2.5 rounded-input border border-line bg-rice/40 text-ink text-sm focus:outline-none focus:border-leaf focus:bg-paper"
           />
         </div>

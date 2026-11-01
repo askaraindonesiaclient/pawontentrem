@@ -48,15 +48,16 @@ export function HeroSection() {
           <div className="lg:col-span-6">
             <div className="relative rounded-card overflow-hidden bg-paper border border-line shadow-md aspect-[4/3] w-full max-h-[460px]">
               <Image
-                src="/assets/photos/nasi-liwet.jpg"
-                alt="Sajian Nasi Liwet hangat Pawon Tentrem"
+                src="/assets/photos/prasmanan-lauk.jpg"
+                alt="Meja saji prasmanan aneka lauk lezat Pawon Tentrem"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"
               />
-              <div className="absolute bottom-3 right-3 px-3 py-1 bg-ink/70 backdrop-blur-sm rounded-md text-[11px] text-paper/90">
-                Foto ilustrasi sajian
+              <div className="absolute bottom-3 right-3 px-3 py-1 bg-ink/75 backdrop-blur-sm rounded-md text-[11px] font-medium text-paper flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-turmeric animate-pulse" />
+                <span>Foto Asli Pawon Tentrem</span>
               </div>
             </div>
           </div>

@@ -11,14 +11,14 @@ export function CeritaSingkat() {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative rounded-card overflow-hidden bg-paper border border-line shadow-sm aspect-[4/3] w-full">
               <Image
-                src="/assets/photos/prasmanan.jpg"
-                alt="Suasana meja prasmanan Pawon Tentrem"
+                src="/assets/photos/prasmanan-antre.jpg"
+                alt="Suasana santap prasmanan hangat di Pawon Tentrem"
                 fill
                 sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover"
               />
-              <div className="absolute bottom-2 right-2 px-2.5 py-0.5 bg-ink/75 backdrop-blur-sm rounded text-[10px] text-paper">
-                Foto ilustrasi warung prasmanan
+              <div className="absolute bottom-2 right-2 px-2.5 py-0.5 bg-ink/75 backdrop-blur-sm rounded text-[10px] text-paper font-medium">
+                Suasana Santap Pawon Tentrem
               </div>
             </div>
           </div>

@@ -52,14 +52,14 @@ export default function TentangPage() {
           <div className="lg:col-span-6">
             <div className="relative rounded-card overflow-hidden bg-rice border border-line shadow-md aspect-[4/3] w-full">
               <Image
-                src="/assets/photos/prasmanan.jpg"
-                alt="Suasana prasmanan Pawon Tentrem"
+                src="/assets/photos/suasana-ruang.jpg"
+                alt="Kenyamanan suasana ruang makan dan meja prasmanan Pawon Tentrem"
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"
               />
-              <div className="absolute bottom-3 right-3 px-3 py-1 bg-ink/75 backdrop-blur-sm rounded text-[11px] text-paper">
-                Foto ilustrasi warung prasmanan
+              <div className="absolute bottom-3 right-3 px-3 py-1 bg-ink/75 backdrop-blur-sm rounded text-[11px] text-paper font-medium">
+                Ruang Makan & Prasmanan Pawon Tentrem
               </div>
             </div>
           </div>

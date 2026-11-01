@@ -6,9 +6,9 @@ VALUES (
   'singleton',
   'Pawon Tentrem',
   'Rasa rumahan, suasana yang menentramkan.',
-  NULL,
-  NULL,
-  NULL,
+  'Perumahan Puncak Dieng Eksklusif Blok NN No. 21 (Dekat Kampus 2 UB), Kunci, Kalisongo, Kec. Dau, Kabupaten Malang, Jawa Timur 65151',
+  '081234567890',
+  'https://share.google/4QzXuDet1O7uiGwKI',
   'Asia/Jakarta',
   '{"meta_title":"Pawon Tentrem - Rumah Makan Prasmanan Jawa","meta_description":"Pilih lauk dan sayur sesuai selera. Sajian rumahan yang hangat dan menentramkan."}'::jsonb,
   1

@@ -10,9 +10,9 @@ interface MampirLokasiProps {
 }
 
 export function MampirLokasi({
-  address = 'Jl. Slamet Riyadi No. 128, Laweyan, Surakarta (Solo), Jawa Tengah',
+  address = 'Perumahan Puncak Dieng Eksklusif Blok NN No. 21 (Dekat Kampus 2 UB), Kunci, Kalisongo, Kec. Dau, Kabupaten Malang, Jawa Timur 65151',
   whatsapp = '081234567890',
-  mapsUrl = 'https://maps.google.com/?q=Solo+Jawa+Tengah',
+  mapsUrl = 'https://share.google/4QzXuDet1O7uiGwKI',
 }: MampirLokasiProps) {
   const [loadMap, setLoadMap] = useState(false);
 

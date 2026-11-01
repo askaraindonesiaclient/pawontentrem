@@ -25,6 +25,14 @@ export const metadata: Metadata = {
       'Pilih lauk dan sayur sesuai selera. Sajian prasmanan segar rumahan dengan suasana hangat menentramkan.',
     locale: 'id_ID',
     type: 'website',
+    images: [
+      {
+        url: '/assets/photos/prasmanan-lauk.jpg',
+        width: 1200,
+        height: 900,
+        alt: 'Sajian Prasmanan Pawon Tentrem',
+      },
+    ],
   },
 };
 

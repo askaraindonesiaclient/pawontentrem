@@ -49,7 +49,7 @@ export default async function HomePage() {
             </Link>
           </div>
 
-          <GaleriGrid showFilter={false} limit={3} />
+          <GaleriGrid showFilter={false} limit={4} />
         </div>
       </section>
 
